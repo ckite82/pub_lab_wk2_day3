@@ -5,7 +5,7 @@ from src.customers import Customer
 class TestCustomer(unittest.TestCase):
 
     def setUp(self):
-        self.customers = Customer("Colin", 20.00)
+        self.customers = Customer("Colin", 20.00, 25)
 
     def test_customer_has_name(self):
         self.assertEqual("Colin", self.customers.name)
