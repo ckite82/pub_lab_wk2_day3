@@ -35,7 +35,7 @@ class TestPub(unittest.TestCase):
 
     def test_customer_can_buy_drink(self):
         customer = Customer("Colin", 20.00, 25)
-        drink = Drink("Tennants", 3.00)
+        drink = Drink("Tennants", 3.00, 2)
         self.pub.customer_can_buy_drink(drink, customer)
         self.assertEqual(3.00, drink.price)
         self.assertEqual(17.00, customer.wallet)
