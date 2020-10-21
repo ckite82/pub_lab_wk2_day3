@@ -1,8 +1,8 @@
 import unittest
 #import unittest is boilerplate language, must be included
-from src.pub import Pub 
-from src.customers import Customer
+from src.customers import Customer 
 from src.drinks import Drink
+from src.pub import Pub
 #from src is the source folder/directory and .pub must exactly reflect name.
 #import Pub is a capital as it is the class name that is being imported
 
@@ -31,8 +31,6 @@ class TestPub(unittest.TestCase):
         customer_is_old_enough = self.pub.check_age(customer.age)
         self.assertEqual(False, customer_is_old_enough)
 
-
-
     def test_customer_can_buy_drink(self):
         customer = Customer("Colin", 20.00, 25)
         drink = Drink("Tennants", 3.00, 2)
@@ -40,3 +38,13 @@ class TestPub(unittest.TestCase):
         self.assertEqual(3.00, drink.price)
         self.assertEqual(17.00, customer.wallet)
         self.assertEqual(103.00, self.pub.till)
+
+    # def test_check_drunkenness_below(self):
+    #     customer1 = Customer("Colin", 20.00, 25, 4)
+    #     customer_drunkenness = self.pub.drunkenness(self.customer1)
+    #     self.assertEqual(True, customer_drunkenness)
+
+    # def test_check_drunkenness_above(self):
+    #     customer2 = Customer("Ed", 20.00, 25, 8)
+    #     customer_drunkenness = self.pub.drunkenness(self.customer2)
+    #     self.assertEqual(False, customer_drunkenness)

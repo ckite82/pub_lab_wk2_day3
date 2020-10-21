@@ -1,5 +1,8 @@
 import unittest
+
+from src.customers import Customer 
 from src.drinks import Drink
+from src.pub import Pub
 
 class TestDrink(unittest.TestCase):
 

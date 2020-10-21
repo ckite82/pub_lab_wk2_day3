@@ -1,7 +1,8 @@
 import unittest
-#import unittest is boilerplate language, must be included
+
 from src.customers import Customer 
 from src.drinks import Drink
+from src.pub import Pub
 
 class TestCustomer(unittest.TestCase):
 
